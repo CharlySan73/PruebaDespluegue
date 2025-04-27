@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablero de Avisos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Tablero de Avisos</h1>
+        <div class="user-info">
+            <span id="username-display"></span>
+            <button id="logout-btn">Cerrar Sesión</button>
+
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="formulario">
+            <h2>Agregar Nueva Nota</h2>
+            <input type="text" id="titulo" placeholder="Título" required>
+            <textarea id="contenido" placeholder="Contenido de la nota..." required></textarea>
+            
+            <div class="recordatorio-container">
+                <label>
+                    <input type="checkbox" id="activar-aviso"> Activar recordatorio
+                </label>
+                <div id="fecha-aviso-container" style="display: none;">
+                    <label for="fecha-recordatorio">Fecha recordatorio:</label>
+                    <input type="datetime-local" id="fecha-recordatorio">
+                </div>
+            </div>
+            
+            <button id="agregar-btn">Agregar Nota</button>
+        </div>
+        
+        <div class="notas-container">
+            <h2>Tus Notas</h2>
+            <div id="notas-lista"></div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+    <script src="auth.js"></script>
+</body>
+</html>
